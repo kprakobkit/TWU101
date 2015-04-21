@@ -32,19 +32,19 @@ public class GuessingGame {
     }
 
     private String checkUserInput(int guess) {
-        String result = "";
+        String feedback = "";
 
         if (guess > answer) {
-            result = "Your guess was too high.";
+            feedback = "Your guess was too high.";
         } else if (guess < answer) {
-            result = "Your guess was too low.";
+            feedback = "Your guess was too low.";
         } else if (guess == answer) {
-            result = "You are correct! Thank you for playing.";
+            feedback = "You are correct! Thank you for playing.";
             gameOver = true;
         }
 
         if (!gameOver) userGuesses.add(guess);
 
-        return result;
+        return feedback;
     }
 }
